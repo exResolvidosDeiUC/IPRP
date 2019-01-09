@@ -3,7 +3,7 @@ Exercícios resolvidos de IPRP
 
 Tentarei verificar e comentar todo o código.
 
-Quem quiser contribuir com resoluções, a comentar código ou reportar erros envie para brugesmiranda@gmail.com com o assunto "exResolvidosDeiUC"
+Para contribuir com resoluções, comentar código ou reportar erros -> brugesmiranda@gmail.com
 
 Outros repositórios serão criados para PPP e POAO
 
