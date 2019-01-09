@@ -1,8 +1,15 @@
 def soma_valores(ficheiro, ficheiro_novo):
     with open(ficheiro, 'r') as file:
         dados = file.readlines()
-    dados = [dado.replace('\n','') for dado in dados]
-    dados = [i.split() for i in dados]
+    #alternativamente
+    #file = open(ficheiro, 'r')
+    #dados=file.readlines()
+    #file.close()
+    dados = [dado.replace('\n','') for dado in dados] #apaga \n no final das strings #NOTA: passo desnecessário visto que o split na linha seguinte remove espaços, \n e \t
+    dados = [i.split() for i in dados] #substitui strings por lista de strings, separadas pelos espaços
+    #alternativamente
+    #for i in range(len(dados)):
+        #dados[i] = dados[i].split()
     dados_dict = {}
     for dado in dados:
         dados_dict.setdefault(dado[0], dado[1:])
