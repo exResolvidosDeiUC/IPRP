@@ -8,6 +8,4 @@ Quem quiser contribuir com resoluções, a comentar código ou reportar erros en
 Outros repositórios serão criados para PPP e POAO
 
 Contribuidores:
-Gabriel 'Gabro' Rodrigues
-João Pinto Cabral
-Rita Rodrigues
+Gabriel 'Gabro' Rodrigues\nJoão Pinto Cabral\nRita Rodrigues
