@@ -1,12 +1,12 @@
-texto = 'ola eu sou muito tola'
+d = {'a':['b', 'c', 'd'], 'b':['a', 'c']}
 
-def processa(frase):
-    lista = list()
-    for i in range(len(frase)):
-        lista.append((frase[i], i, 0))
-        if lista[-1][0] == lista[-2][0] and i != 0:
-            lista[-2][2] += 1
-            lista.pop(-1)
-    return lista
+def mais_seguidores(dicionario):
+    maximo = 0
+    maximizante = ''
+    for x, y in dicionario.items():
+        if len(y) > maximo:
+            maximo = len(y)
+            maximizante = x
+    return maximizante
 
-print(processa(texto))
+print(mais_seguidores(d))
