@@ -1,28 +1,27 @@
-def soma_valores(ficheiro, ficheiro_novo):
-    with open(ficheiro, 'r') as file:
-        dados = file.readlines()
-    #alternativamente
-    #file = open(ficheiro, 'r')
-    #dados=file.readlines()
-    #file.close()
-    dados = [dado.replace('\n','') for dado in dados] #apaga \n no final das strings #NOTA: passo desnecessário visto que o split na linha seguinte remove espaços, \n e \t
-    dados = [i.split() for i in dados] #substitui strings por lista de strings, separadas pelos espaços
-    #alternativamente
-    #for i in range(len(dados)):
-        #dados[i] = dados[i].split()
-    dados_dict = {}
-    for dado in dados:
-        dados_dict.setdefault(dado[0], dado[1:])
-        dados_dict[dado[0]].append(str(sum([int(i) for i in dado[1:]])))
-    dados_temp = dados_dict.copy()
-    dados_ord = {}
-    for i in range(len(dados_dict)):
-        for nome, vals in dados_dict.items():
-            if len([j[-1] for j in dados_temp.values()]) > 0 and vals[-1] == max([j[-1] for j in dados_temp.values()]):
-                dados_ord.setdefault(nome, vals)
-                dados_temp.pop(nome)
-    texto = ''
-    for nome, vals in dados_ord.items():
-        texto += nome + ' ' + ' '.join(vals) + '\n'
-    with open(ficheiro_novo, 'w') as file:
-        file.write(texto)
+def ficheiros_ordena(ficheiro, ficheiro2):
+    f = open(ficheiro, 'r')
+    ler = f.readlines()
+    f.close()
+    lista1 = []
+    #criar nova lista com soma adicionada no fim
+    for i in range(len(ler)):
+        soma = 0
+        lista = ler[i].split()
+        for j in lista[1:]:
+                soma = soma + int(j)
+        lista.append(soma)
+        lista1.append(lista)
+    #ordenar lista
+    for i in range(len(lista1)):
+        for j in range(len(lista1) - 1):
+            if lista1[j][-1] > lista1[j + 1][-1]:
+                lista1[j], lista1[j + 1] = lista1[j+1], lista1[j]
+                #alternativamente
+                #auxiliar = lista1[j]
+                #lista1[j] = lista1[j + 1]
+                #lista1[j + 1] = auxiliar
+    #escrever tudo no ficheiro
+    f = open(ficheiro2, 'w')
+    for listinhas in lista1:
+        f.write(str(listinhas) + '\n')
+    f.close()
