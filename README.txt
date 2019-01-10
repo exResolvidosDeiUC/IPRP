@@ -11,3 +11,4 @@ Contribuidores:
 Gabriel 'Gabro' Rodrigues
 João Pinto Cabral
 Rita Rodrigues
+Filipa Capela
