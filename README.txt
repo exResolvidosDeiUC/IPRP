@@ -9,6 +9,7 @@ Outros repositórios serão criados para PPP e POAO
 
 Contribuidores:
 Gabriel 'Gabro' Rodrigues
+Francisco Miranda
 João Pinto Cabral
 Rita Rodrigues
 Filipa Capela
